@@ -14,7 +14,7 @@ const hash = [
   { letter: "M", number: 1000 },
 ];
 
-export const romanNumeralToNumber = (romanNum: string) => {
+export const romanNumeralToNumber = (romanNum: string): number => {
   const romanNumArr = splitRomanNum(romanNum);
   const romanToNumber = romanNumArr.map((letter) => {
     const index = (element: { letter: string }) => element.letter === letter;
