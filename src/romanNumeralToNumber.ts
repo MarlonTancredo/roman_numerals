@@ -10,6 +10,7 @@ const hash = [
   { letter: "C", number: 100 },
   { letter: "CD", number: 400 },
   { letter: "D", number: 500 },
+  { letter: "CM", number: 900 },
   { letter: "M", number: 1000 },
 ];
 
@@ -38,18 +39,25 @@ const splitRomanNum = (romanNum: string): string[] => {
   for (let i = 0; i < romanNumSplitted.length; i++) {
     if (romanNumSplitted[i] === "I" && romanNumSplitted[i + 1] === "V") {
       romanNumFormatted.push("IV");
+      romanNumSplitted.splice(i, 1);
     } else if (romanNumSplitted[i] === "I" && romanNumSplitted[i + 1] === "X") {
       romanNumFormatted.push("IX");
+      romanNumSplitted.splice(i, 1);
     } else if (romanNumSplitted[i] === "L" && romanNumSplitted[i + 1] === "X") {
       romanNumFormatted.push("LX");
+      romanNumSplitted.splice(i, 1);
     } else if (romanNumSplitted[i] === "X" && romanNumSplitted[i + 1] === "C") {
       romanNumFormatted.push("XC");
+      romanNumSplitted.splice(i, 1);
     } else if (romanNumSplitted[i] === "C" && romanNumSplitted[i + 1] === "D") {
       romanNumFormatted.push("CD");
+      romanNumSplitted.splice(i, 1);
+    } else if (romanNumSplitted[i] === "C" && romanNumSplitted[i + 1] === "M") {
+      romanNumFormatted.push("CM");
+      romanNumSplitted.splice(i, 1);
     } else {
       romanNumFormatted.push(romanNumSplitted[i]);
     }
-    romanNumSplitted.splice(i, 1);
   }
   return romanNumFormatted;
 };
