@@ -15,7 +15,7 @@ const hash = [
 ];
 
 export const romanNumeralToNumber = (romanNum: string): number => {
-  const romanNumArr = splitRomanNum(romanNum);
+  const romanNumArr = splitRomanNum(romanNum.toUpperCase());
   const romanToNumber = romanNumArr.map((letter) => {
     const index = (element: { letter: string }) => element.letter === letter;
     return hash[hash.findIndex(index)].number;
