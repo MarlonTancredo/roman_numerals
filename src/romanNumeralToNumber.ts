@@ -1,5 +1,6 @@
 const hash = [
   { letter: "I", number: 1 },
+  { letter: "IV", number: 4 },
   { letter: "V", number: 5 },
   { letter: "X", number: 10 },
   { letter: "L", number: 50 },
@@ -9,12 +10,12 @@ const hash = [
 ];
 
 export const romanNumeralToNumber = (romanNum: string) => {
-  const romanNumArr = romanNum.split("");
-  const test = romanNumArr.map((letter) => {
-    return hash[hash.findIndex((hashIndex) => hashIndex.letter === letter)]
-      .number;
+  const romanNumArr = splitRomanNum(romanNum);
+  const romanToNumber = romanNumArr.map((letter) => {
+    const index = (element: { letter: string }) => element.letter === letter;
+    return hash[hash.findIndex(index)].number;
   });
-  return sumConvertedNumbers(test);
+  return sumConvertedNumbers(romanToNumber);
 };
 
 const sumConvertedNumbers = (convertedNum: number[]) => {
@@ -24,4 +25,19 @@ const sumConvertedNumbers = (convertedNum: number[]) => {
     initialValue
   );
   return sumWithInitial;
+};
+
+const splitRomanNum = (romanNum: string): string[] => {
+  const romanNumFormatted: string[] = [];
+  const romanNumSplitted = romanNum.split("");
+
+  for (let i = 0; i < romanNumSplitted.length; i++) {
+    if (romanNumSplitted[i] === "I" && romanNumSplitted[i + 1] === "V") {
+      romanNumFormatted.push("IV");
+      romanNumSplitted.splice(i, 1);
+    } else {
+      romanNumFormatted.push(romanNumSplitted[i]);
+    }
+  }
+  return romanNumFormatted;
 };
