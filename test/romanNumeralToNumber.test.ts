@@ -61,3 +61,10 @@ describe("Converting specific cases to normal number.", () => {
     expect(romanNumeralToNumber(romanNumeral)).toBe(900);
   });
 });
+
+describe("Verifying the input is toUppercase.", () => {
+  test("Should return a number 1", () => {
+    const romanNumeral = "i";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(1);
+  });
+});
