@@ -1,13 +1,9 @@
 import { romanNumeralToNumber } from "../src/romanNumeralToNumber";
 
-describe("Convert Roman numeral to normal number", () => {
+describe("Converting normal cases to normal number.", () => {
   test("should return a number 1", () => {
     const romanNumeral = "I";
     expect(romanNumeralToNumber(romanNumeral)).toBe(1);
-  });
-  test("should return a number 3", () => {
-    const romanNumeral = "III";
-    expect(romanNumeralToNumber(romanNumeral)).toBe(3);
   });
   test("should return a number 5", () => {
     const romanNumeral = "V";
@@ -32,6 +28,13 @@ describe("Convert Roman numeral to normal number", () => {
   test("should return a number 1000", () => {
     const romanNumeral = "M";
     expect(romanNumeralToNumber(romanNumeral)).toBe(1000);
+  });
+});
+
+describe("Converting specific cases to normal number.", () => {
+  test("should return a number 3", () => {
+    const romanNumeral = "III";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(3);
   });
   test("should return a number 4", () => {
     const romanNumeral = "IV";
