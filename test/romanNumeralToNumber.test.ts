@@ -5,6 +5,10 @@ describe("Convert Roman numeral to normal number", () => {
     const romanNumeral = "I";
     expect(romanNumeralToNumber(romanNumeral)).toBe(1);
   });
+  test("should return a number 3", () => {
+    const romanNumeral = "III";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(3);
+  });
   test("should return a number 5", () => {
     const romanNumeral = "V";
     expect(romanNumeralToNumber(romanNumeral)).toBe(5);
