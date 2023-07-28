@@ -1,18 +1,4 @@
-const hash = [
-  { letter: "I", number: 1 },
-  { letter: "IV", number: 4 },
-  { letter: "V", number: 5 },
-  { letter: "IX", number: 9 },
-  { letter: "X", number: 10 },
-  { letter: "XL", number: 40 },
-  { letter: "L", number: 50 },
-  { letter: "XC", number: 90 },
-  { letter: "C", number: 100 },
-  { letter: "CD", number: 400 },
-  { letter: "D", number: 500 },
-  { letter: "CM", number: 900 },
-  { letter: "M", number: 1000 },
-];
+import { hash } from "./hash";
 
 export const romanNumeralToNumber = (romanNum: string): number => {
   const romanNumArr = splitRomanNum(romanNum.toUpperCase());
