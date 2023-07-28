@@ -7,12 +7,12 @@ export const romanNumeralToNumber = (romanNum: string): number => {
     const index = (element: { letter: string }) => element.letter === letter;
     return hash[hash.findIndex(index)].number;
   });
-  return sumConvertedNumbers(romanToNumber);
+  return sumRomanToNumber(romanToNumber);
 };
 
-const sumConvertedNumbers = (convertedNum: number[]) => {
+const sumRomanToNumber = (romanToNumber: number[]) => {
   const initialValue = 0;
-  const sumWithInitial = convertedNum.reduce(
+  const sumWithInitial = romanToNumber.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     initialValue
   );

@@ -1,3 +1,5 @@
+//I will refactor this function in the future i promise! 😀
+
 export const splitRomanNum = (romanNum: string): string[] => {
   const romanNumFormatted: string[] = [];
   const romanNumSplitted = romanNum.split("");
