@@ -41,4 +41,12 @@ describe("Convert Roman numeral to normal number", () => {
     const romanNumeral = "LX";
     expect(romanNumeralToNumber(romanNumeral)).toBe(40);
   });
+  test("should return a number 90", () => {
+    const romanNumeral = "XC";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(90);
+  });
+  test("should return a number 400", () => {
+    const romanNumeral = "CD";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(400);
+  });
 });
