@@ -6,7 +6,9 @@ const hash = [
   { letter: "X", number: 10 },
   { letter: "LX", number: 40 },
   { letter: "L", number: 50 },
+  { letter: "XC", number: 90 },
   { letter: "C", number: 100 },
+  { letter: "CD", number: 400 },
   { letter: "D", number: 500 },
   { letter: "M", number: 1000 },
 ];
@@ -40,6 +42,10 @@ const splitRomanNum = (romanNum: string): string[] => {
       romanNumFormatted.push("IX");
     } else if (romanNumSplitted[i] === "L" && romanNumSplitted[i + 1] === "X") {
       romanNumFormatted.push("LX");
+    } else if (romanNumSplitted[i] === "X" && romanNumSplitted[i + 1] === "C") {
+      romanNumFormatted.push("XC");
+    } else if (romanNumSplitted[i] === "C" && romanNumSplitted[i + 1] === "D") {
+      romanNumFormatted.push("CD");
     } else {
       romanNumFormatted.push(romanNumSplitted[i]);
     }
