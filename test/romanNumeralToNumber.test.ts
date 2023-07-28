@@ -49,4 +49,8 @@ describe("Convert Roman numeral to normal number", () => {
     const romanNumeral = "CD";
     expect(romanNumeralToNumber(romanNumeral)).toBe(400);
   });
+  test("should return a number 900", () => {
+    const romanNumeral = "CM";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(900);
+  });
 });
