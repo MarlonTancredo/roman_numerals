@@ -42,7 +42,7 @@ describe("Convert Roman numeral to normal number", () => {
     expect(romanNumeralToNumber(romanNumeral)).toBe(9);
   });
   test("should return a number 40", () => {
-    const romanNumeral = "LX";
+    const romanNumeral = "XL";
     expect(romanNumeralToNumber(romanNumeral)).toBe(40);
   });
   test("should return a number 90", () => {
