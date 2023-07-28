@@ -1,3 +1,3 @@
 // import { romanNumeralToNumber } from "./src/romanNumeralToNumber";
 
-// console.log(romanNumeralToNumber("IVI"));
+// console.log(romanNumeralToNumber("IV"));
