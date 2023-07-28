@@ -33,4 +33,12 @@ describe("Convert Roman numeral to normal number", () => {
     const romanNumeral = "IV";
     expect(romanNumeralToNumber(romanNumeral)).toBe(4);
   });
+  test("should return a number 9", () => {
+    const romanNumeral = "IX";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(9);
+  });
+  test("should return a number 40", () => {
+    const romanNumeral = "LX";
+    expect(romanNumeralToNumber(romanNumeral)).toBe(40);
+  });
 });
