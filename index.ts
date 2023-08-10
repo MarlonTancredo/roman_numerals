@@ -1,3 +1,7 @@
-// import { romanNumeralToNumber } from "./src/romanNumeralToNumber";
+import {
+  getRomanNumeralToUpperCase,
+  printDecimalNumber,
+} from "./src/romanTonumber";
 
-// console.log(romanNumeralToNumber("IV"));
+getRomanNumeralToUpperCase("XXIV");
+printDecimalNumber();
