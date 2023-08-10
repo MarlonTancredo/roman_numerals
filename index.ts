@@ -1,7 +1,7 @@
 import {
   getRomanNumeralToUpperCase,
   printDecimalNumber,
-} from "./src/romanTonumber";
+} from "./src/romanNumeralToNumber";
 
 getRomanNumeralToUpperCase("XXIV");
-printDecimalNumber();
+console.log(printDecimalNumber());
