@@ -5,15 +5,22 @@ import {
 } from "./src/romanNumeralToNumber";
 import { convertToRoman } from "./src/numberToRomanNumeral";
 
+const messages = {
+  upperCaseMessage: "You must to enter a uppercase letter!",
+  validNumberMessage: "You must enter a valid Roman number!",
+  finalMessage: "Convert to Number:",
+};
+const { upperCaseMessage, validNumberMessage, finalMessage } = messages;
+
 const printNumber = (letter: string) => {
   if (!isLetterUpperCase(letter)) {
-    return "You must to enter a uppercase letter!";
+    console.log(upperCaseMessage);
   }
   if (isValidNumber(convertToNumber(letter))) {
-    return "You must enter a valid Roman number!";
+    console.log(validNumberMessage);
   }
-  return `Convert to Number: ${convertToNumber(letter)}`;
+  console.log(`${finalMessage} ${convertToNumber(letter)}`);
 };
-console.log(printNumber("XXXIV"));
+printNumber("XXXIV");
 
-console.log("Convert to Roman numeral:", convertToRoman(1001));
+console.log("Convert to Roman numeral:", convertToRoman(1321));
