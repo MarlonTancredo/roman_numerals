@@ -14,12 +14,15 @@ const romanNumerals: RomanType = {
 
 export const convertToNumber = (letter: string) => {
   let result: number = 0;
-
   for (let i: number = 0; i < letter.length; i++) {
     romanNumerals[letter[i]] < romanNumerals[letter[i + 1]]
       ? (result -= romanNumerals[letter[i]])
       : (result += romanNumerals[letter[i]]);
   }
-  console.log("Convert to number: ", result);
   return result;
 };
+
+export const isValidNumber = (result: number) => (isNaN(result) ? true : false);
+
+export const isLetterUpperCase = (letter: string) =>
+  letter === letter.toUpperCase() ? true : false;
