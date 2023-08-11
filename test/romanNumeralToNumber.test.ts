@@ -1,27 +1,11 @@
-import {
-  getRomanNumeralToUpperCase,
-  printDecimalNumber,
-} from "../src/romanNumeralToNumber";
+import { convertToNumber } from "../src/romanNumeralToNumber";
 
-describe("getRomanNumeralToUpperCase()", () => {
-  it("should return any string to upperCase ", () => {
+describe("convertToNumber()", () => {
+  it("should return 24 ", () => {
     //Arrange
-    const romanNumeral = "i";
+    const romanNumeral = "XXIV";
 
     //Act Assert
-    expect(getRomanNumeralToUpperCase(romanNumeral)).toBe("I");
-  });
-});
-
-describe("printDecimalNumber()", () => {
-  it("should return 4 ", () => {
-    //Arrange
-    const romanNumeral = "xxiv";
-
-    //Act
-    getRomanNumeralToUpperCase(romanNumeral);
-
-    //Assert
-    expect(printDecimalNumber()).toBe(24);
+    expect(convertToNumber(romanNumeral)).toBe(24);
   });
 });

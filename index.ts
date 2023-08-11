@@ -1,7 +1,3 @@
-import {
-  getRomanNumeralToUpperCase,
-  printDecimalNumber,
-} from "./src/romanNumeralToNumber";
+import { convertToNumber } from "./src/romanNumeralToNumber";
 
-getRomanNumeralToUpperCase("XXIV");
-console.log(printDecimalNumber());
+console.log(convertToNumber("IV"));
