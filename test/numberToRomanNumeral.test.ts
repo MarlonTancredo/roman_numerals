@@ -8,13 +8,13 @@ describe("convertToRoman()", () => {
   it("should return a message", () => {
     //Arrange Act Assert
     expect(convertToRoman(4000)).toBe(
-      "The range of Roman numeral are 3999, try another number"
+      "\nThe range of Roman numeral are 3999, try a number lower then 4000."
     );
   });
   it("should return a message", () => {
     //Arrange Act Assert
     expect(convertToRoman(0)).toBe(
-      "There's no zero number in Roman numeral, try another number"
+      "\nThere's no zero number in Roman numeral, try a number bigger then ZERO."
     );
   });
 });

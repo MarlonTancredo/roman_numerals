@@ -51,11 +51,11 @@ const romans: RomanType = {
 
 export const convertToRoman = (decimal: number) => {
   if (decimal > 3999) {
-    return "The range of Roman numeral are 3999, try another number";
+    return "\nThe range of Roman numeral are 3999, try a number lower then 4000.";
   }
 
   if (decimal === 0) {
-    return "There's no zero number in Roman numeral, try another number";
+    return "\nThere's no zero number in Roman numeral, try a number bigger then ZERO.";
   }
 
   const decimalToString = decimal.toString().split("");
