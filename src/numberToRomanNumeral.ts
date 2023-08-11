@@ -39,7 +39,6 @@ const romans: RomanType = {
     1: "C",
     2: "CC",
     3: "CCC",
-
     4: "CD",
     5: "D",
     6: "DC",

@@ -2,7 +2,7 @@ type RomanType = {
   [key: string]: number;
 };
 
-export const romanNumerals: RomanType = {
+const romanNumerals: RomanType = {
   I: 1,
   V: 5,
   X: 10,
