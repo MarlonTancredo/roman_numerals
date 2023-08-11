@@ -2,7 +2,7 @@ type RomanType = {
   [key: string]: number;
 };
 
-const romanNumerals: RomanType = {
+export const romanNumerals: RomanType = {
   I: 1,
   V: 5,
   X: 10,
@@ -20,5 +20,6 @@ export const convertToNumber = (letter: string) => {
       ? (result -= romanNumerals[letter[i]])
       : (result += romanNumerals[letter[i]]);
   }
+  console.log("Convert to number: ", result);
   return result;
 };
