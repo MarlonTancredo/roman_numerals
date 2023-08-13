@@ -1,4 +1,8 @@
-import { convertToRoman } from "../src/numberToRomanNumeral";
+import {
+  convertToRoman,
+  isOutRange,
+  isZero,
+} from "../src/numberToRomanNumeral";
 
 describe("convertToRoman()", () => {
   it("should return M", () => {
@@ -8,22 +12,18 @@ describe("convertToRoman()", () => {
     //Act Assert
     expect(convertToRoman(number)).toBe("M");
   });
-  it("should return a message", () => {
+  it("should return a true", () => {
     //Arrange
     const number = 4000;
-    const message =
-      "\nThe range of Roman numeral are 3999, try a number lower then 4000.";
 
     //Act Assert
-    expect(convertToRoman(number)).toBe(message);
+    expect(isOutRange(number)).toBe(true);
   });
-  it("should return a message", () => {
+  it("should return a true", () => {
     //Arrange
     const number = 0;
-    const message =
-      "\nThere's no zero number in Roman numeral, try a number bigger then ZERO.";
 
     //Act Assert
-    expect(convertToRoman(number)).toBe(message);
+    expect(isZero(number)).toBe(true);
   });
 });
