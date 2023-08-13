@@ -1,15 +1,15 @@
-type Romans = {
+type RomanKeys = {
   [key: number]: string;
 };
 
-type RomanType = {
-  singles: Romans;
-  tens: Romans;
-  hundreds: Romans;
-  thousands: Romans;
+type Numerals = {
+  singles: RomanKeys;
+  tens: RomanKeys;
+  hundreds: RomanKeys;
+  thousands: RomanKeys;
 };
 
-const romans: RomanType = {
+const numerals: Numerals = {
   singles: {
     0: "",
     1: "I",
@@ -48,6 +48,7 @@ const romans: RomanType = {
   },
   thousands: { 1: "M", 2: "MM", 3: "MMM" },
 };
+const { singles, tens, hundreds, thousands } = numerals;
 
 export const convertToRoman = (decimal: number) => {
   if (decimal > 3999) {
@@ -62,24 +63,24 @@ export const convertToRoman = (decimal: number) => {
 
   switch (decimalToString.length) {
     case 1:
-      return romans.singles[parseInt(decimalToString[0])];
+      return singles[parseInt(decimalToString[0])];
     case 2:
       return (
-        romans.tens[parseInt(decimalToString[0])] +
-        romans.singles[parseInt(decimalToString[1])]
+        tens[parseInt(decimalToString[0])] +
+        singles[parseInt(decimalToString[1])]
       );
     case 3:
       return (
-        romans.hundreds[parseInt(decimalToString[0])] +
-        romans.tens[parseInt(decimalToString[1])] +
-        romans.singles[parseInt(decimalToString[2])]
+        hundreds[parseInt(decimalToString[0])] +
+        tens[parseInt(decimalToString[1])] +
+        singles[parseInt(decimalToString[2])]
       );
     case 4:
       return (
-        romans.thousands[parseInt(decimalToString[0])] +
-        romans.hundreds[parseInt(decimalToString[1])] +
-        romans.tens[parseInt(decimalToString[2])] +
-        romans.singles[parseInt(decimalToString[3])]
+        thousands[parseInt(decimalToString[0])] +
+        hundreds[parseInt(decimalToString[1])] +
+        tens[parseInt(decimalToString[2])] +
+        singles[parseInt(decimalToString[3])]
       );
   }
 };
