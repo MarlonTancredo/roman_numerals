@@ -51,14 +51,6 @@ const numerals: Numerals = {
 const { singles, tens, hundreds, thousands } = numerals;
 
 export const convertToRoman = (decimal: number) => {
-  if (decimal > 3999) {
-    return "\nThe range of Roman numeral are 3999, try a number lower then 4000.";
-  }
-
-  if (decimal === 0) {
-    return "\nThere's no zero number in Roman numeral, try a number bigger then ZERO.";
-  }
-
   const decimalToString = decimal.toString().split("");
 
   switch (decimalToString.length) {
@@ -84,3 +76,7 @@ export const convertToRoman = (decimal: number) => {
       );
   }
 };
+
+export const isOutRange = (decimal: number) => decimal > 3999;
+
+export const isZero = (decimal: number) => decimal === 0;

@@ -22,7 +22,7 @@ export const convertToNumber = (letter: string) => {
   return result;
 };
 
-export const isValidNumber = (result: number) => (isNaN(result) ? true : false);
+export const isValidNumber = (result: number) => isNaN(result);
 
 export const isLetterUpperCase = (letter: string) =>
-  letter === letter.toUpperCase() ? true : false;
+  letter === letter.toUpperCase();
