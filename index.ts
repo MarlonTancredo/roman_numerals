@@ -14,13 +14,13 @@ const { upperCaseMessage, validNumberMessage, finalMessage } = messages;
 
 const printNumber = (letter: string) => {
   if (!isLetterUpperCase(letter)) {
-    console.log(upperCaseMessage);
+    throw new Error(upperCaseMessage);
   }
   if (isValidNumber(convertToNumber(letter))) {
-    console.log(validNumberMessage);
+    throw new Error(validNumberMessage);
   }
   console.log(`${finalMessage} ${convertToNumber(letter)}`);
 };
-printNumber("XXXIV");
+printNumber("X");
 
-console.log("Convert to Roman numeral:", convertToRoman(1321));
+console.log("Convert to Roman numeral:", convertToRoman(1));
