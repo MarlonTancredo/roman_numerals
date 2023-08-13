@@ -44,5 +44,5 @@ const printDecimal = (number: number) => {
   console.log("Convert to Roman numeral:", convertToRoman(number));
 };
 
-printRomanNumeral("X");
-printDecimal(10);
+printRomanNumeral("CXLIV");
+printDecimal(144);
